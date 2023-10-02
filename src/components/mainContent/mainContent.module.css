@@ -1,0 +1,14 @@
+.mainContent {
+  min-height: 100vh;
+}
+
+.valuePart {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  font-size: 15px;
+  /*height is full viewport width minus navbar and paddings,full min-height is 550px plus 8vh*/
+  height: calc(100vh - 75px - 8vh);
+  min-height: 550px;
+  padding: 4vh 0 4vh 0;
+}

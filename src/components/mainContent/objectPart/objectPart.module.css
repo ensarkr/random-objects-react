@@ -1,0 +1,46 @@
+.objectsPart {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  font-size: 15px;
+  /*height is auto it will grow depending on blueprintContainerDiv*/
+  padding: 4vh 0 4vh 0;
+}
+
+.blueprintContainerDiv {
+  width: calc(60% - 7.5px);
+  position: relative;
+  padding: 1em;
+  /*height is auto it will grow depending on its content*/
+  box-sizing: border-box;
+}
+
+.resultPartDiv {
+  width: calc(40% - 7.5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /*normal height 100vh minus navbar and paddings of objectsPart, min-height is 550px*/
+  height: calc(100vh - 75px - 8vh);
+  min-height: 550px;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+@media screen and (max-width: 1000px) {
+  .objectsPart {
+    flex-direction: column;
+    height: auto;
+    padding: 2vh 0 2vh 0;
+  }
+
+  .blueprintContainerDiv {
+    width: 100%;
+    height: max-content;
+    min-height: auto;
+  }
+
+  .resultPartDiv {
+    width: 100%;
+  }
+}

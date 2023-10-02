@@ -1,0 +1,21 @@
+.blueprintElementDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.blueprintElementAddDiv {
+  height: calc(1.4375em + 33px);
+  width: 100%;
+  margin-top: 30px;
+}
+
+#trashBin {
+  height: 56px;
+  aspect-ratio: 1;
+  border: 1px solid rgba(106, 176, 251, 0.5);
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-left: 5px;
+}

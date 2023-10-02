@@ -1,0 +1,21 @@
+.centeredPreview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preview {
+}
+
+.preview::-webkit-scrollbar-track:vertical {
+  border-radius: 0 3px 0 0;
+}
+.preview::-webkit-scrollbar-thumb:vertical {
+  border-radius: 0 2px 0 0;
+}
+.preview::-webkit-scrollbar-track:horizontal {
+  border-radius: 0 0 0 3px;
+}
+.preview::-webkit-scrollbar-thumb:horizontal {
+  border-radius: 0 0 0 3px;
+}

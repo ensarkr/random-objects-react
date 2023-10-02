@@ -1,0 +1,30 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 15px;
+  font-family: "Roboto", sans-serif;
+
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.inputWidth {
+  width: 300px;
+}
+
+.bottomPart {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  gap: 15px;
+}
+
+.textInput {
+  width: 300px;
+}
+
+@media screen and (max-width: 360px) {
+  .inputWidth {
+    width: 240px;
+  }
+}

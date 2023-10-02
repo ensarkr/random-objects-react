@@ -1,0 +1,98 @@
+:root {
+  --text: #f0f7ff;
+  --background: #010c19;
+  --primary: #6ab0fb;
+  --secondary: #faa761;
+  --error: hsl(4, 90%, 58%);
+  --warning: #ffa726;
+}
+
+body {
+  margin: 0;
+  background-color: #010c19;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 2px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+::-webkit-scrollbar-corner {
+}
+
+.choicesScroll::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 2px;
+}
+
+.secondaryIndicator .MuiTabs-indicator {
+  background-color: var(--secondary);
+}
+
+.miniTab .MuiTab-root {
+  width: 60px;
+  min-width: 60px;
+}
+
+/* Handle */
+.choicesScroll::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+}
+
+/* Handle on hover */
+.choicesScroll::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+.title {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flexStart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1em;
+}
+
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexColumn {
+  flex-direction: column;
+}
+
+.flexEnd {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1em;
+}

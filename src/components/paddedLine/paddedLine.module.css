@@ -1,0 +1,18 @@
+.paddedLine {
+  position: relative;
+  width: max-content;
+}
+
+.minimizeButton {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  left: -1em;
+  user-select: none;
+}

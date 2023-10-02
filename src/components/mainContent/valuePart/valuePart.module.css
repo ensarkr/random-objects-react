@@ -1,0 +1,75 @@
+.valuePart {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  font-size: 15px;
+  /*height is full viewport width minus navbar and paddings,full min-height is 550px plus 8vh*/
+  height: calc(100vh - 75px - 8vh);
+  min-height: 550px;
+  padding: 4vh 0 4vh 0;
+}
+
+.choicesDiv {
+  width: calc(40% - 7.5px);
+  position: relative;
+  /* height is 100% of valueParts content part */
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1em;
+}
+
+.resultDiv {
+  width: calc(60% - 7.5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* height is same with valueParts content part */
+  height: calc(100vh - 75px - 8vh);
+  box-sizing: border-box;
+  min-height: 550px;
+  padding: 1em;
+}
+
+.valuePartTitle {
+  font-size: 20px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+}
+
+.marginBottom {
+  margin-bottom: 10px;
+}
+
+.choicesValue {
+  overflow-y: scroll;
+  /* minus 34px title, 10px marginBottom, 48px tab height, minus 2px padding */
+  height: calc(100% - 92px);
+  padding: 1px 0;
+}
+
+.choicesValue::-webkit-scrollbar-track {
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+}
+
+@media screen and (max-width: 1000px) {
+  .valuePart {
+    flex-direction: column;
+    height: auto;
+    padding: 2em 0 2em 0;
+  }
+
+  .choicesDiv {
+    width: 100%;
+    height: 470px;
+  }
+
+  .resultDiv {
+    width: 100%;
+  }
+}
