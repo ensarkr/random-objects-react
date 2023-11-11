@@ -562,6 +562,7 @@ const getDefaultArgObject: getArgObjectI = (functionName) => {
         options: {
           unique: false,
           keepOrder: true,
+          allowDuplicates: false,
         },
       } as randomArraysArgObjectI as getDefaultArgObjectReturnArgI<
         typeof functionName
