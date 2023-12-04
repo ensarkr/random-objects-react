@@ -22,6 +22,12 @@ import PaddedLine from "../../../paddedLine/PaddedLine";
 
 const PaddedLine_Memo = memo(PaddedLine);
 
+/*
+ResultObjectPart 
+
+Parses blueprint and sends it to ObjectWorker and displays preview.
+*/
+
 export default function ResultObjectPart({
   blueprint,
   setBlueprint,

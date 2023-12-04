@@ -51,6 +51,13 @@ interface formProps {
   bookmarkedFunctionData: functionI_STR | undefined;
 }
 
+/*
+FunctionForms
+
+Returns function forms based on functionName prop.
+Drills other props to forms without any modification.  
+*/
+
 export default function FunctionForms({
   saveArgs,
   savedFunctionData,
@@ -155,6 +162,51 @@ export type getLatestElementDataT_STR = (
 
 export type validateFormT = () => boolean;
 
+/*
+RandomNumbersForm (applies all forms below)
+
+Renders form for saving generator options and bookmark block to save it to vault.
+It saves using saveArgs prop.
+saveArgs prop saves the blueprint element.
+
+Functions
+1. getLatestElementData 
+Used for getting latest form inputs plus function metadata.
+Used as a input when calling saveArgs prop.
+Return inputs both as string (passing it to web workers or store it in localStorage) 
+and normal value (used by codeblocks).
+
+2. getLatestElementData_STR 
+Used for getting latest form inputs as string plus function metadata.
+Used by bookmarkBlock to save it to vault
+
+3. getArgObject_STR
+Used for getting latest form inputs.
+Used by first two function.
+
+4. validateForms 
+Checks form if its processable by generator functions or code blocks.
+
+5. getInitialTitle
+Gets initial title for bookmark title
+
+Also it populates populatable inputs.
+
+Input Populate Order
+1. bookmarkedFunctionData prop   
+bookmarkedFunctionData comes from vault and managed by blueprintElement.
+Its checked in RandomNumbersForm if its have the same functionName or not.
+
+2. savedFunctionData prop
+savedFunctionData comes from blueprintElement.
+Its set in RandomNumbersForm by using saveArgs.
+
+3. getDefaultArgObject function
+Returns default options for given function functionName.
+
+4. If its undefined its handled by input hooks.(Mostly will be empty string.)
+*/
+
 function RandomNumbersForm({
   saveArgs,
   savedFunctionData,
@@ -227,19 +279,7 @@ function RandomNumbersForm({
             customCompare: baseOptions.customCompare.getRealValue(false),
           },
         },
-        argObject_STR: {
-          inputs: {
-            starting: starting.inputProps.value,
-            ending: ending.inputProps.value,
-          },
-          options: {
-            maximumDigitsAfterPoint: maximumDigitsAfterPoint.inputProps.value,
-            onlyIntegers: onlyIntegers.inputProps.checked.toString(),
-            unique: baseOptions.unique.inputProps.checked.toString(),
-            customMap: baseOptions.customMap.inputProps.value,
-            customCompare: baseOptions.customCompare.inputProps.value,
-          },
-        },
+        argObject_STR: getArgObject_STR(),
       };
       return latestElementData;
     } catch (error) {

@@ -39,6 +39,17 @@ type saveStaticValueT = (
   savedElementData: blueprintElementI
 ) => void;
 
+/*
+BlueprintElement 
+
+Renders key, value and remove.
+Key is input.
+Values is button that opens popup to write static value of choose one of the generator functions.
+Remove is button delete element.
+
+It has multiple function save key, value and remove.
+*/
+
 export default function BlueprintElement({
   savedElementData,
   setBlueprintElement,
@@ -107,7 +118,7 @@ export default function BlueprintElement({
     (functionData) => {
       let buttonText = "value";
 
-      // * if bookmark states exists and new argObject_STR is same with bookmarkedFunctionData.argObject_STR keep buttonText as bookmarkTitle
+      // * if users clicks save in bookmark forms without changing any input, do not change button title(keep bookmarks title)
       // * else get default ui name and reset bookmark states
       if (
         bookmarkedTitle &&

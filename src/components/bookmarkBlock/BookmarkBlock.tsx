@@ -19,6 +19,13 @@ import { getLatestElementDataT_STR } from "../functionForms/FunctionForms";
 import { useFormInputTextField } from "../../hooks/useFormInput";
 import VaultNoAccess from "../errorDiv/ErrorDiv";
 
+/*
+BookmarkBlock 
+
+Button to save blueprint or blueprintElement to the vault.
+It validates forms itself by using validate props.
+*/
+
 export default function BookmarkBlock({
   options,
 }: {

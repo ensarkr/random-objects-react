@@ -79,6 +79,15 @@ const allPredefinedCustomFunctionSettings: Record<
   },
 };
 
+/*
+CodeBlock 
+
+Renders button and a popup that opens when button clicked.
+
+JavaScript editor that uses new Function().
+It does not uses web workers cause only crates 8 items.
+*/
+
 export default function CodeBlock({
   type,
   formInputData,

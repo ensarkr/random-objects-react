@@ -27,6 +27,19 @@ export type setBlueprintElementT = (
   isSourceKey?: boolean
 ) => void;
 
+/*
+BlueprintContainer 
+
+Renders blueprint elements, and bookmark block to save blueprint.
+
+Functions
+1. setBlueprintElement
+Sended to blueprint element to save blueprint element.
+
+2. addKeyAndValue
+Adds new blueprint element.
+*/
+
 export default function BlueprintContainer({
   blueprint,
   setBlueprint,
